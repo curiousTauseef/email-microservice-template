@@ -1,0 +1,1 @@
+Little template for email microservices if some1 needs it. Gonna update it sometime
