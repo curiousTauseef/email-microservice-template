@@ -20,6 +20,9 @@ public class Email {
     @ApiModelProperty(value = "Sent from")
     private String from;
 
+    @ApiModelProperty(value = "Subject")
+    private String subject;
+
     @ApiModelProperty(value = "Send copy to")
     @NotBlank
     private String cc;
