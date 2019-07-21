@@ -1,6 +1,6 @@
 package com.frostmaster.email.exception;
 
-import com.frostmaster.email.dto.ErrorDto;
+import com.frostmaster.email.dto.ExceptionDto;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
@@ -20,16 +20,16 @@ public class RestExceptionHandler {
     private final MessageSource messageSource;
 
     @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<ErrorDto> handleRuntimeException(RuntimeException ex) {
+    public ResponseEntity<ExceptionDto> handleRuntimeException(RuntimeException ex) {
         return new ResponseEntity<>(
-                new ErrorDto(HttpStatus.INTERNAL_SERVER_ERROR.value(),ex.getMessage()),
+                new ExceptionDto(HttpStatus.INTERNAL_SERVER_ERROR.value(),ex.getMessage()),
                 HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(ServiceException.class)
-    public ResponseEntity<ErrorDto> handleServiceException(ServiceException ex) {
+    public ResponseEntity<ExceptionDto> handleServiceException(ServiceException ex) {
         return new ResponseEntity<>(
-                new ErrorDto(HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                new ExceptionDto(HttpStatus.INTERNAL_SERVER_ERROR.value(),
                         messageSource.getMessage(ex.getMessageCode(), ex.getParams(), DEFAULT_LOCALE)),
                 HttpStatus.INTERNAL_SERVER_ERROR);
     }

@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class ErrorDto {
-    private int status;
+public class ExceptionDto {
+    private Integer status;
     private String message;
 }

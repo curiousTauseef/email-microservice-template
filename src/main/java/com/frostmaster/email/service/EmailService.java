@@ -1,10 +1,10 @@
 package com.frostmaster.email.service;
 
-import com.frostmaster.email.dto.Email;
+import com.frostmaster.email.entity.Email;
 
 
 public interface EmailService {
 
-    void sendEmail(Email email);
+    boolean sendEmail(Email email);
 
 }

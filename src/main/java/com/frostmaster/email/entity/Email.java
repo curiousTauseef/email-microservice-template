@@ -1,4 +1,4 @@
-package com.frostmaster.email.dto;
+package com.frostmaster.email.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;

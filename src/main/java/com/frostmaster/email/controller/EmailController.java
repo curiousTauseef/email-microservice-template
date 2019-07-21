@@ -1,6 +1,6 @@
 package com.frostmaster.email.controller;
 
-import com.frostmaster.email.dto.Email;
+import com.frostmaster.email.entity.Email;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
