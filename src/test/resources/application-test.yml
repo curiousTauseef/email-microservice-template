@@ -1,23 +1,17 @@
 spring:
-  profiles: test
-  cloud:
-    kubernetes:
-      enabled: false
-  h2:
-    console:
-      enabled: true
-  datasource:
-      driverClassName: org.h2.Driver
-      url: jdbc:h2:mem:test;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-      username: sa
-      password:
-  jpa:
-      properties:
-        hibernate:
-          ddl-auto: update
-          format_sql: true
-          show_sql: false
-
-eureka:
-  client:
-    enabled: false
+  mail:
+    default-encoding: UTF-8
+    host: localhost
+    jndi-name:
+    username: username
+    password: secret
+    port: 2525
+    properties:
+      mail:
+        debug: true
+        smtp:
+          debug: false
+          auth: false
+          starttls: false
+    protocol: smtp
+    test-connection: false
